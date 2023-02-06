@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+i {
+  color: white;
+  font-size: 20px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: none;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 500px;
+  height: 350px;
+  margin: auto;
+  border: 5px solid;
+
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.carousel-slide {
+  display: flex;
+}
+
+.carousel-slide img {
+  width: 500px;
+  min-height: 350px;
+}
+
+.prev-btn {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.next-btn {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.carousel-bullets {
+  position: absolute;
+  bottom: 2.5%;
+  left: 50%;
+
+  display: flex;
+  gap: 4px;
+
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.carousel-bullets .bullet {
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+
+  background-color: white;
+  border-radius: 50%;
+  transition: background-color 150ms ease-in-out;
+}
+
+.carousel-bullets .bullet.active {
+  background-color: black;
+  transition: transform 0.2s ease-out;
+}
